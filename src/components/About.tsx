@@ -1,10 +1,7 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Award, Users, Target } from "lucide-react";
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 px-4">
+  return <section id="about" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-6">
@@ -31,15 +28,15 @@ const About = () => {
               <Card className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <CardContent className="p-6 text-center">
                   <Users className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                  <h3 className="text-white font-semibold mb-2">College Coding Society</h3>
-                  <p className="text-slate-400 text-sm">Active Member</p>
+                  <h3 className="font-semibold mb-2 text-zinc-950">College Coding Society</h3>
+                  <p className="text-slate-400 text-sm"> Member</p>
                 </CardContent>
               </Card>
 
               <Card className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border-orange-500/20 hover:border-orange-400/40 transition-all duration-300">
                 <CardContent className="p-6 text-center">
                   <Award className="w-8 h-8 text-orange-400 mx-auto mb-3" />
-                  <h3 className="text-white font-semibold mb-2">NCC Cadet (Air Force)</h3>
+                  <h3 className="font-semibold mb-2 text-zinc-950">NCC Cadet (Air Force)</h3>
                   <p className="text-slate-400 text-sm">Best Cadet Award</p>
                 </CardContent>
               </Card>
@@ -57,13 +54,12 @@ const About = () => {
                     <GraduationCap className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-white font-semibold text-lg mb-2">Bachelor in Computer Applications</h4>
-                    <p className="text-slate-300 mb-2">Trinity Institute Of Professional Studies, IPU</p>
+                    <h4 className="font-semibold text-lg mb-2 text-teal-900">Bachelor in Computer Applications</h4>
+                    <p className="mb-2 text-neutral-900">Trinity Institute Of Professional Studies, IPU 
+UNIVERSITY RANK HOLDER </p>
                     <div className="flex justify-between items-center">
                       <span className="text-slate-400">2022 – 2025</span>
-                      <span className="bg-gradient-to-r from-green-400 to-emerald-400 text-slate-900 px-3 py-1 rounded-full text-sm font-semibold">
-                        GPA: 9.3/10
-                      </span>
+                      <span className="bg-gradient-to-r from-green-400 to-emerald-400 text-slate-900 px-3 py-1 rounded-full text-sm font-semibold">GPA: 8.5/10</span>
                     </div>
                   </div>
                 </div>
@@ -77,8 +73,8 @@ const About = () => {
                     <Target className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-white font-semibold text-lg mb-2">High School</h4>
-                    <p className="text-slate-300 mb-2">Basava International School</p>
+                    <h4 className="font-semibold text-lg mb-2 text-zinc-950">High School</h4>
+                    <p className="mb-2 text-zinc-950">Basava International School</p>
                     <div className="flex justify-between items-center">
                       <span className="text-slate-400">2008 – 2021</span>
                       <span className="bg-gradient-to-r from-blue-400 to-cyan-400 text-slate-900 px-3 py-1 rounded-full text-sm font-semibold">
@@ -92,8 +88,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
