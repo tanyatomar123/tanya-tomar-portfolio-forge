@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,16 +15,45 @@ const Contact = () => {
     email: "",
     message: ""
   });
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Initialize EmailJS
+  emailjs.init('tMpG16x9mFqp3K9mw');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setIsLoading(true);
+
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      };
+
+      await emailjs.send(
+        'service_2abtf5p',
+        'template_lteq5x8',
+        templateParams
+      );
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+      
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or contact me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -63,6 +93,7 @@ const Contact = () => {
                     className="mt-2 bg-slate-700/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-cyan-400"
                     placeholder="Your full name"
                     required
+                    disabled={isLoading}
                   />
                 </div>
                 
@@ -77,6 +108,7 @@ const Contact = () => {
                     className="mt-2 bg-slate-700/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-cyan-400"
                     placeholder="your.email@example.com"
                     required
+                    disabled={isLoading}
                   />
                 </div>
                 
@@ -91,15 +123,26 @@ const Contact = () => {
                     className="mt-2 bg-slate-700/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-cyan-400 resize-none"
                     placeholder="Tell me about your project or how I can help you..."
                     required
+                    disabled={isLoading}
                   />
                 </div>
                 
                 <Button 
                   type="submit"
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white py-3"
+                  disabled={isLoading}
                 >
-                  <Send className="w-5 h-5 mr-2" />
-                  Send Message
+                  {isLoading ? (
+                    <>
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5 mr-2" />
+                      Send Message
+                    </>
+                  )}
                 </Button>
               </form>
             </CardContent>
