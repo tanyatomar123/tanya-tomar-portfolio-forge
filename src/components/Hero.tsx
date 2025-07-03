@@ -85,10 +85,12 @@ const Hero = () => {
         <div className="flex justify-center lg:justify-end">
           <div className="relative">
             <div className="w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 p-1 animate-pulse">
-              <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
-                <div className="w-72 h-72 md:w-88 md:h-88 rounded-full bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center text-6xl font-bold text-white">
-                  TT
-                </div>
+              <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center overflow-hidden">
+                <img 
+                  src="https://i.postimg.cc/2jQjLz7G/PHOTU.png" 
+                  alt="Tanya Tomar - Data Science Professional"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
             </div>
             
