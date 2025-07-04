@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Download, Eye, MessageCircle, Sparkles } from "lucide-react";
 const Hero = () => {
@@ -36,7 +37,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-6 text-lg rounded-xl" onClick={() => window.open('/resume.pdf', '_blank')}>
+            <Button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-6 text-lg rounded-xl" onClick={() => window.open('https://i.postimg.cc/0QfqBJWL/Data-analyst-Data-science-AI-ML-ENGINEER-Tanya-Tomar.png', '_blank')}>
               <Download className="w-5 h-5 mr-2" />
               Download Resume
             </Button>
