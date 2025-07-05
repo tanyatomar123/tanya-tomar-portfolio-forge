@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -205,7 +204,7 @@ const Contact = () => {
                   <Github className="w-6 h-6 text-slate-400 group-hover:text-white" />
                 </a>
                 <a 
-                  href="https://linkedin.com/in/tanya-tomar" 
+                  href="https://www.linkedin.com/in/tanya-tomar-0721262a4/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center hover:from-blue-500 hover:to-blue-600 transition-all duration-300 group"

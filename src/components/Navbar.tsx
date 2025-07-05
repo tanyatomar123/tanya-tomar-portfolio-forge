@@ -58,7 +58,7 @@ const Navbar = () => {
             <a href="https://github.com/tanyatomar123" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5 text-white hover:text-cyan-400 transition-colors" />
             </a>
-            <a href="https://linkedin.com/in/tanya-tomar" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/tanya-tomar-0721262a4/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="w-5 h-5 text-white hover:text-cyan-400 transition-colors" />
             </a>
             <a href="mailto:tanyatomar766@gmail.com">
