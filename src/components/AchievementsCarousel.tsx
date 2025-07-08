@@ -50,13 +50,15 @@ const AchievementsCarousel = () => {
     setCurrentIndex((prev) => (prev + 1) % achievements.length);
   };
 
+  const IconComponent = achievements[currentIndex].icon;
+
   return (
     <div className="relative max-w-2xl mx-auto">
       <Card className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 border-slate-700/50 transition-all duration-500`}>
         <CardContent className="p-8">
           <div className="flex items-center gap-4 mb-4">
             <div className={`w-16 h-16 bg-gradient-to-br ${achievements[currentIndex].gradient} rounded-full flex items-center justify-center`}>
-              <achievements[currentIndex].icon className="w-8 h-8 text-white" />
+              <IconComponent className="w-8 h-8 text-white" />
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">{achievements[currentIndex].title}</h3>
