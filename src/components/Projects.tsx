@@ -1,15 +1,20 @@
 
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Eye, Sparkles } from "lucide-react";
+import ProjectFilter from "./ProjectFilter";
 
 const Projects = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
   const projects = [
     {
       title: "AI-Powered Travel Assistant",
       description: "Trip planning bot with real-time suggestions and multi-language support. Helps users plan personalized travel itineraries with AI-powered recommendations.",
       techStack: ["Python", "NLP", "Machine Learning", "API Integration", "Flask"],
+      category: "AI/ML",
       features: [
         "Real-time travel suggestions",
         "Multi-language support",
@@ -27,6 +32,7 @@ const Projects = () => {
       title: "Smart Circular Economy Marketplace",
       description: "AI-powered resale platform with predictive pricing and recommendation engine. Promotes sustainable consumption through intelligent product matching.",
       techStack: ["Python", "Machine Learning", "Recommendation Systems", "Predictive Analytics", "Streamlit"],
+      category: "Data Science",
       features: [
         "Predictive pricing algorithm",
         "AI-powered recommendations",
@@ -44,6 +50,7 @@ const Projects = () => {
       title: "Low-Resource Language Translator",
       description: "Fine-tuned multilingual NLP model using Hugging Face and BLEU scoring. Specializes in translating between low-resource language pairs.",
       techStack: ["Python", "Transformers", "Hugging Face", "BLEU Scoring", "PyTorch"],
+      category: "NLP",
       features: [
         "Fine-tuned transformer models",
         "BLEU score evaluation",
@@ -59,6 +66,12 @@ const Projects = () => {
     }
   ];
 
+  const categories = [...new Set(projects.map(project => project.category))];
+  
+  const filteredProjects = selectedCategory === 'all' 
+    ? projects 
+    : projects.filter(project => project.category === selectedCategory);
+
   return (
     <section id="projects" className="py-20 px-4 bg-slate-900/50">
       <div className="max-w-7xl mx-auto">
@@ -72,27 +85,51 @@ const Projects = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto mt-6"></div>
         </div>
 
+        <ProjectFilter 
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onCategoryChange={setSelectedCategory}
+        />
+
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <Card 
               key={index}
-              className={`bg-gradient-to-br ${project.bgGradient} ${project.borderColor} hover:border-opacity-60 transition-all duration-300 hover:scale-105 group`}
+              className={`bg-gradient-to-br ${project.bgGradient} ${project.borderColor} hover:border-opacity-60 transition-all duration-300 hover:scale-105 group animate-fade-in`}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6 h-full flex flex-col">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${project.gradient} rounded-lg flex items-center justify-center`}>
+                  <div className={`w-12 h-12 bg-gradient-to-br ${project.gradient} rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300`}>
                     <Sparkles className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex gap-2">
-                    <Button size="icon" variant="ghost" className="text-slate-400 hover:text-white">
+                    <Button 
+                      size="icon" 
+                      variant="ghost" 
+                      className="text-slate-400 hover:text-white transform hover:scale-110 transition-all duration-200"
+                      onClick={() => window.open(project.github, '_blank')}
+                    >
                       <Github className="w-4 h-4" />
                     </Button>
-                    <Button size="icon" variant="ghost" className="text-slate-400 hover:text-white">
+                    <Button 
+                      size="icon" 
+                      variant="ghost" 
+                      className="text-slate-400 hover:text-white transform hover:scale-110 transition-all duration-200"
+                      onClick={() => window.open(project.demo, '_blank')}
+                    >
                       <ExternalLink className="w-4 h-4" />
                     </Button>
                   </div>
                 </div>
+
+                {/* Category Badge */}
+                <Badge 
+                  className={`mb-3 w-fit bg-gradient-to-r ${project.gradient} text-white`}
+                >
+                  {project.category}
+                </Badge>
 
                 {/* Title & Description */}
                 <div className="mb-4">
@@ -136,7 +173,7 @@ const Projects = () => {
                 {/* Action Buttons */}
                 <div className="flex gap-2 mt-auto">
                   <Button 
-                    className={`flex-1 bg-gradient-to-r ${project.gradient} text-white hover:opacity-90 transition-opacity duration-200 text-sm`}
+                    className={`flex-1 bg-gradient-to-r ${project.gradient} text-white hover:opacity-90 transition-all duration-200 text-sm transform hover:scale-105`}
                     onClick={() => window.open(project.github, '_blank')}
                   >
                     <Github className="w-4 h-4 mr-2" />
@@ -144,7 +181,7 @@ const Projects = () => {
                   </Button>
                   <Button 
                     variant="outline" 
-                    className={`flex-1 ${project.borderColor} text-slate-300 hover:bg-slate-800/30 text-sm`}
+                    className={`flex-1 ${project.borderColor} text-slate-300 hover:bg-slate-800/30 text-sm transform hover:scale-105 transition-all duration-200`}
                     onClick={() => window.open(project.demo, '_blank')}
                   >
                     <Eye className="w-4 h-4 mr-2" />
@@ -160,7 +197,7 @@ const Projects = () => {
         <div className="text-center mt-16">
           <p className="text-slate-400 mb-6">Want to see more of my work?</p>
           <Button 
-            className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-3"
+            className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-3 transform hover:scale-105 transition-all duration-300"
             onClick={() => window.open('https://github.com/tanyatomar123', '_blank')}
           >
             <Github className="w-5 h-5 mr-2" />
