@@ -83,7 +83,6 @@ const Hero = () => {
           </div>
 
           <div className="flex items-center justify-center lg:justify-start gap-8 pt-8">
-            <StatCounter value={2} label="Years Experience" suffix="+" />
             <StatCounter value={15} label="Projects Completed" suffix="+" />
             <StatCounter value={8.5} label="GPA" />
           </div>
