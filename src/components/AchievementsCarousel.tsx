@@ -58,7 +58,7 @@ const AchievementsCarousel = () => {
         <CardContent className="p-8">
           <div className="flex items-center gap-4 mb-4">
             <div className={`w-16 h-16 bg-gradient-to-br ${achievements[currentIndex].gradient} rounded-full flex items-center justify-center`}>
-              <IconComponent className="w-8 h-8 text-white" />
+              <IconComponent className="w-8.5 h-8.5 text-white" />
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">{achievements[currentIndex].title}</h3>
