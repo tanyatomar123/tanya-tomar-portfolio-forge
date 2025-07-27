@@ -49,7 +49,7 @@ const StatCounter = ({ value, label, suffix = "", duration = 2000 }: StatCounter
   return (
     <div ref={ref} className="text-center">
       <div className="text-3xl font-bold text-white">
-        {Math.floor(count)}{suffix}
+        {count % 1 === 0 ? Math.floor(count) : count.toFixed(1)}{suffix}
       </div>
       <div className="text-sm text-slate-400">{label}</div>
     </div>
