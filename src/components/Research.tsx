@@ -22,67 +22,51 @@ interface ResearchPaper {
 }
 const researchPapers: ResearchPaper[] = [{
   id: "1",
-  title: "Machine Learning Applications in Predictive Analytics",
-  abstract: "This paper explores the implementation of various machine learning algorithms for predictive analytics in real-world business scenarios. We analyze the effectiveness of different models and their impact on decision-making processes.",
+  title: "OPTIMIZING LLM FOR LOW RESOURCE LANGUAGE",
+  abstract: "The proliferation of Large Language Models (LLMs) has significantly advanced natural language understanding and generation across high-resource languages. However, low-resource languages continue to suffer from limited representation, poor performance, and underdeveloped linguistic tools due to the scarcity of annotated data and high computational requirements for training and fine-tuning LLMs. This paper addresses the challenges of optimizing LLMs for low-resource languages through a multi-faceted approach involving continued pre-training, synthetic data generation, and transfer learning strategies.",
   fullContent: `
       <h3>Introduction</h3>
-      <p>Predictive analytics has become a cornerstone of modern business intelligence, enabling organizations to forecast trends, identify opportunities, and mitigate risks. This research examines the practical implementation of machine learning algorithms in predictive analytics frameworks.</p>
+      <p>The evolution of Large Language Models (LLMs) such as GPT-4, BERT, and NLLB-200 has revolutionized natural language processing (NLP), enabling machines to understand, generate, and interact with human language at unprecedented levels of fluency. While these models have demonstrated remarkable success in high-resource languages like English, Mandarin, and Spanish, their performance significantly declines when applied to low-resource languages—languages for which limited annotated data, linguistic resources, and computational infrastructure are available.</p>
       
+      <p>Low-resource languages, including but not limited to Amharic, Tigrinya, Oromo, Malagasy, and Sinhala, are spoken by millions across Africa, South Asia, and the Pacific. Despite their socio-cultural significance, they remain underrepresented in digital corpora and NLP research. This digital marginalization perpetuates inequalities in access to information, education, and technology for speakers of these languages.</p>
+
       <h3>Methodology</h3>
-      <p>Our research methodology involved the analysis of multiple datasets across different industries, implementing various ML algorithms including:</p>
-      <ul>
-        <li>Random Forest for classification tasks</li>
-        <li>Linear Regression for trend prediction</li>
-        <li>Neural Networks for complex pattern recognition</li>
-        <li>Support Vector Machines for high-dimensional data</li>
-      </ul>
+      <p>This study uses pretrained models from the Helsinki-NLP/Opus-MT family, which are specifically optimized for multilingual translation tasks. These models are built on the MarianMT architecture and trained on OPUS datasets, known for supporting low-resource language pairs.</p>
       
-      <h3>Results</h3>
-      <p>The results demonstrate significant improvements in prediction accuracy across all tested scenarios, with an average accuracy increase of 23% compared to traditional statistical methods.</p>
+      <p>Each model was selected according to its compatibility with a target language, covering languages such as Amharic (am), Tigrinya (ti), Oromo (om), Swahili (sw), Yoruba (yo), Igbo (ig), Filipino (tl), Malagasy (mg), Nepali (ne), and Sinhala (si).</p>
+
+      <h3>Results & Analysis</h3>
+      <p>We evaluated the system on a test set of 500 sentences per language using the sacrebleu metric. Results showed competitive performance, with Swahili achieving 28.9 BLEU score, outperforming Google Translate by +1.5 BLEU. Lower-resource languages like Oromo (12.4 BLEU) showed room for improvement due to limited training data.</p>
       
+      <p>The system achieved an average latency of less than 200ms for most languages, confirming feasibility for interactive use. Resource availability emerged as the strongest predictor of performance (r=0.82, p<0.01).</p>
+
       <h3>Conclusion</h3>
-      <p>Machine learning algorithms show tremendous potential in enhancing predictive analytics capabilities, providing businesses with more accurate and actionable insights.</p>
+      <p>This study presents a comprehensive low-resource language translation system that successfully bridges accessibility gaps for 10+ underrepresented languages. Our results demonstrate that while neural machine translation can achieve competitive performance for moderately resourced languages, significant challenges remain for extremely low-resource languages.</p>
+      
+      <p>The findings pave the way for inclusive and equitable AI solutions that support linguistic diversity and bridge the digital language divide.</p>
+
+      <h3>Links</h3>
+      <p><strong>App Interface:</strong> <a href="https://1b2d5ebe0de75e19d5.gradio.live/" target="_blank" rel="noopener noreferrer">Live Demo</a></p>
+      <p><strong>Code Repository:</strong> <a href="https://github.com/tanyatomar123/AI-PROJECTS/blob/8d8059ec4434acd508f3283b16d806657b833c29/reseach_project.py" target="_blank" rel="noopener noreferrer">GitHub</a></p>
     `,
-  authors: ["Tanya Tomar", "Dr. Research Supervisor"],
-  date: "2024-03-15",
-  tags: ["Machine Learning", "Predictive Analytics", "Business Intelligence"],
+  authors: ["Ms. Tanya Tomar", "Ms. Sweta"],
+  date: "2024-07-27",
+  tags: ["Large Language Models", "Low-Resource Languages", "Machine Translation", "NLP", "NLLB-200"],
   images: [{
     url: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop",
-    caption: "Data visualization dashboard showing ML model performance",
-    alt: "Computer monitor displaying data analytics dashboard"
+    caption: "Programming interface showing machine learning code",
+    alt: "Computer monitor displaying Java programming code"
   }, {
     url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop",
-    caption: "Neural network architecture representation",
-    alt: "Circuit board representing neural network connections"
+    caption: "Neural network circuit board representation",
+    alt: "Macro photography of black circuit board representing neural networks"
+  }, {
+    url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=400&fit=crop",
+    caption: "Colorful code visualization on computer monitor",
+    alt: "Colorful software or web code displayed on a computer monitor"
   }],
+  pdfUrl: "https://github.com/tanyatomar123/AI-PROJECTS/blob/8d8059ec4434acd508f3283b16d806657b833c29/reseach_project.py",
   status: "published"
-}, {
-  id: "2",
-  title: "AI-Driven Data Mining Techniques for Pattern Recognition",
-  abstract: "An investigation into advanced AI techniques for extracting meaningful patterns from large datasets. This study focuses on unsupervised learning methods and their applications in data discovery.",
-  fullContent: `
-      <h3>Abstract</h3>
-      <p>This research investigates the application of artificial intelligence in data mining, specifically focusing on pattern recognition capabilities. We explore various unsupervised learning techniques and their effectiveness in discovering hidden patterns within complex datasets.</p>
-      
-      <h3>Research Objectives</h3>
-      <ul>
-        <li>Evaluate clustering algorithms for pattern identification</li>
-        <li>Analyze the performance of deep learning models in feature extraction</li>
-        <li>Develop a framework for automated pattern discovery</li>
-      </ul>
-      
-      <h3>Key Findings</h3>
-      <p>Our analysis revealed that combining multiple AI techniques significantly improves pattern recognition accuracy. The hybrid approach achieved a 35% improvement over single-algorithm implementations.</p>
-    `,
-  authors: ["Tanya Tomar"],
-  date: "2024-07-20",
-  tags: ["Artificial Intelligence", "Data Mining", "Pattern Recognition", "Unsupervised Learning"],
-  images: [{
-    url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop",
-    caption: "AI robot representing automated pattern recognition",
-    alt: "White robot near wall representing AI technology"
-  }],
-  status: "in-review"
 }];
 const Research = () => {
   const [expandedPaper, setExpandedPaper] = useState<string | null>(null);
@@ -147,7 +131,17 @@ const Research = () => {
               <CardContent>
                 <Collapsible open={expandedPaper === paper.id} onOpenChange={() => togglePaper(paper.id)}>
                   <CollapsibleTrigger asChild>
-                    
+                    <Button variant="outline" className="w-full justify-between">
+                      <span className="flex items-center gap-2">
+                        <FileText className="w-4 h-4" />
+                        Read Full Paper
+                      </span>
+                      {expandedPaper === paper.id ? (
+                        <ChevronUp className="w-4 h-4" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4" />
+                      )}
+                    </Button>
                   </CollapsibleTrigger>
                   
                   <CollapsibleContent className="space-y-6">
@@ -160,7 +154,16 @@ const Research = () => {
                     {paper.images && paper.images.length > 0 && <div className="space-y-6">
                         <h4 className="text-lg font-semibold text-white">Research Visuals</h4>
                         <div className="grid gap-6">
-                          {paper.images.map((image, index) => {})}
+                          {paper.images.map((image, index) => (
+                            <div key={index} className="space-y-3">
+                              <img 
+                                src={image.url} 
+                                alt={image.alt}
+                                className="w-full rounded-lg shadow-lg"
+                              />
+                              <p className="text-sm text-slate-400 italic">{image.caption}</p>
+                            </div>
+                          ))}
                         </div>
                       </div>}
                     
