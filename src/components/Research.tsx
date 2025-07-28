@@ -53,17 +53,29 @@ const researchPapers: ResearchPaper[] = [{
   date: "2024-07-27",
   tags: ["Large Language Models", "Low-Resource Languages", "Machine Translation", "NLP", "NLLB-200"],
   images: [{
-    url: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop",
-    caption: "Programming interface showing machine learning code",
-    alt: "Computer monitor displaying Java programming code"
+    url: "/lovable-uploads/263cf943-b1c7-4d0b-b68f-6e874747b00a.png",
+    caption: "Translation Performance (BLEU Scores) by Language - Comparative analysis showing performance across different low-resource languages",
+    alt: "Bar chart showing BLEU scores for different target languages including Amharic, Tigrinya, Swahili, Yoruba, and Oromo"
   }, {
-    url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop",
-    caption: "Neural network circuit board representation",
-    alt: "Macro photography of black circuit board representing neural networks"
+    url: "/lovable-uploads/c6d9380b-836f-4228-bd95-f870895740eb.png", 
+    caption: "BLEU Score Calculation Implementation - Code snippet showing the evaluation methodology using sacrebleu library",
+    alt: "Python code snippet demonstrating BLEU score calculation with corpus_bleu function"
   }, {
-    url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=400&fit=crop",
-    caption: "Colorful code visualization on computer monitor",
-    alt: "Colorful software or web code displayed on a computer monitor"
+    url: "/lovable-uploads/9d91b1cc-159b-4e60-bef4-38d54c92b23a.png",
+    caption: "Distribution of Sentences in Evaluation Dataset - Breakdown of test data across different low-resource languages",
+    alt: "Pie chart showing percentage distribution of evaluation sentences across Amharic, Tigrinya, Swahili, Yoruba, and Oromo languages"
+  }, {
+    url: "/lovable-uploads/9272f13c-55d4-49cc-afcf-2f95206b7cae.png",
+    caption: "Comprehensive Results Analysis - Multi-faceted evaluation including translation quality, resource analysis, error types, user ratings, and feature correlations",
+    alt: "Dashboard with six different charts analyzing translation quality, BLEU scores by resource level, speed-accuracy trade-offs, error types, user ratings, and feature correlations"
+  }, {
+    url: "/lovable-uploads/c660e2d4-b689-4b7e-8608-bcc6a71858b4.png",
+    caption: "Low-Resource Language Translator Interface - Live demo of the Gradio-based translation system showing English to Swahili translation",
+    alt: "Screenshot of the translation app interface with English input, Swahili output, and language selection dropdown"
+  }, {
+    url: "/lovable-uploads/f5bb3923-0458-4b4f-959c-ae261581c01b.png",
+    caption: "Translation Performance vs. Time Analysis - Correlation between translation quality (BLEU) and processing time across all supported languages",
+    alt: "Line chart with dual y-axes showing BLEU scores and processing time in milliseconds for different target languages"
   }],
   pdfUrl: "https://github.com/tanyatomar123/AI-PROJECTS/blob/8d8059ec4434acd508f3283b16d806657b833c29/reseach_project.py",
   status: "published"
