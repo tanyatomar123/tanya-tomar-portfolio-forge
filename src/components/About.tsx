@@ -63,6 +63,19 @@ const About = () => {
                     </div>
                   </div>
                   
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-4">
+                    <img 
+                      src="/lovable-uploads/fcedf7d4-b67a-4f30-af17-0aa35a5ee4be.png" 
+                      alt="University ranking results showing University Topper / College Topper achievement"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  <div className="text-center mb-4">
+                    <h5 className="text-lg font-semibold text-white mb-1">🎓 University Topper / College Topper</h5>
+                    <p className="text-cyan-400 text-sm font-medium">Outstanding Academic Performance</p>
+                  </div>
+                  
                   
                   <div className="space-y-2">
                     <p className="text-slate-300 text-sm leading-relaxed">
