@@ -65,8 +65,8 @@ const About = () => {
                   
                   <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                     <img 
-                      src="/lovable-uploads/8770944d-dd41-45b0-8f3a-2fd8cde28d06.png" 
-                      alt="University ranking results showing Rank 1 achievement"
+                      src="/lovable-uploads/3197dd41-89b0-4f8e-8724-3deb8e9f7434.png" 
+                      alt="University ranking results showing Tanya Tomar at Rank 1"
                       className="w-full h-full object-cover"
                     />
                   </div>
