@@ -63,13 +63,6 @@ const About = () => {
                     </div>
                   </div>
                   
-                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                    <img 
-                      src="/lovable-uploads/3197dd41-89b0-4f8e-8724-3deb8e9f7434.png" 
-                      alt="University ranking results showing Tanya Tomar at Rank 1"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
                   
                   <div className="space-y-2">
                     <p className="text-slate-300 text-sm leading-relaxed">
