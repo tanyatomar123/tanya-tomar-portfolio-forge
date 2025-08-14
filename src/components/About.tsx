@@ -1,9 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Award, Users, Target } from "lucide-react";
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 px-4">
+  return <section id="about" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-6">
@@ -64,11 +62,7 @@ const About = () => {
                   </div>
                   
                   <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-4">
-                    <img 
-                      src="/lovable-uploads/fcedf7d4-b67a-4f30-af17-0aa35a5ee4be.png" 
-                      alt="University ranking results showing University Topper / College Topper achievement"
-                      className="w-full h-full object-cover"
-                    />
+                    
                   </div>
                   
                   <div className="text-center mb-4">
@@ -139,8 +133,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
